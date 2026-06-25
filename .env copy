@@ -1,0 +1,4 @@
+# LLM Configuration
+LLM_API_URL=https://webhook.nstechservice.shop/api/generate
+LLM_API_KEY=your_key
+LLM_MODEL=qwen2.5:7b

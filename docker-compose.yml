@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  streamlit-app:
+    build: .
+    container_name: ns_llm_chat
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - db_data:/app/data
+    environment:
+      - SQLITE_DB_PATH=/app/data/chat_history.db
+    restart: unless-stopped
+
+volumes:
+  db_data:
